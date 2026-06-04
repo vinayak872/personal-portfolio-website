@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import '../styles/navbar.css'
 
 /**
  * Navbar Component
- * Provides navigation links and mobile menu toggle
+ * Provides smooth scroll navigation links and mobile menu toggle
  */
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -13,13 +12,31 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault()
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+      setIsMenuOpen(false)
+    }
+  }
+
+  const navLinks = [
+    { href: '#home', label: 'Home' },
+    { href: '#skills', label: 'Skills' },
+    { href: '#certifications', label: 'Certifications' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#blog', label: 'Blog' },
+    { href: '#contact', label: 'Contact' }
+  ]
+
   return (
     <nav className="navbar">
       <div className="nav-container">
         {/* Logo */}
-        <Link to="/" className="nav-logo">
-          <span className="logo-text">Portfolio</span>
-        </Link>
+        <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="nav-logo">
+          <span className="logo-text">VK</span>
+        </a>
 
         {/* Hamburger Menu */}
         <div className="hamburger" onClick={toggleMenu}>
@@ -30,26 +47,17 @@ export default function Navbar() {
 
         {/* Navigation Links */}
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-          <li className="nav-item">
-            <Link to="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/projects" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-              Projects
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/blog" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-              Blog
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-              Contact
-            </Link>
-          </li>
+          {navLinks.map((link) => (
+            <li key={link.href} className="nav-item">
+              <a
+                href={link.href}
+                className="nav-link"
+                onClick={(e) => handleNavClick(e, link.href)}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
