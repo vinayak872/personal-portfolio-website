@@ -298,10 +298,6 @@
     padding: 30px;
   }
 }
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: var(--accent-color);
-}
 
 .skill-tags {
   display: flex;
