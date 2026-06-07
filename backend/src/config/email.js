@@ -1,18 +1,18 @@
+import nodemailer from 'nodemailer'
+
 console.log('EMAIL USER AT LOAD:', process.env.EMAIL_USER)
 console.log('EMAIL PASS AT LOAD:', !!process.env.EMAIL_PASSWORD)
-import nodemailer from 'nodemailer'
 
 /**
  * Gmail Email Configuration
  */
-
 const transporter = nodemailer.createTransport({
-  host: process.env.EMAIL_HOST,
-  port: Number(process.env.EMAIL_PORT),
-  secure: false,
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
   auth: {
-    user: process.env.EMAIL_USER.trim(),
-    pass: process.env.EMAIL_PASSWORD.trim()
+    user: process.env.EMAIL_USER?.trim(),
+    pass: process.env.EMAIL_PASSWORD?.trim()
   }
 })
 
@@ -24,9 +24,7 @@ export const verifyEmailConnection = async () => {
     console.log('EMAIL CONFIGURATION:')
     console.log('USER:', process.env.EMAIL_USER)
     console.log('PASSWORD EXISTS:', !!process.env.EMAIL_PASSWORD)
-    console.log('PASSWORD:', process.env.EMAIL_PASSWORD)
-    console.log('USER RAW:', JSON.stringify(process.env.EMAIL_USER))
-    console.log('PASS RAW:', JSON.stringify(process.env.EMAIL_PASSWORD))
+
     await transporter.verify()
 
     console.log('✓ Email connection established')
@@ -41,8 +39,15 @@ export const verifyEmailConnection = async () => {
 /**
  * Send contact form email to admin
  */
-export const sendContactEmail = async (name, email, subject, message) => {
+export const sendContactEmail = async (
+  name,
+  email,
+  subject,
+  message
+) => {
   try {
+    console.log('=== SEND CONTACT EMAIL STARTED ===')
+
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
@@ -77,8 +82,13 @@ export const sendContactEmail = async (name, email, subject, message) => {
 /**
  * Send confirmation email to visitor
  */
-export const sendConfirmationEmail = async (recipientEmail, name) => {
+export const sendConfirmationEmail = async (
+  recipientEmail,
+  name
+) => {
   try {
+    console.log('=== SEND CONFIRMATION EMAIL STARTED ===')
+
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: recipientEmail,
@@ -99,9 +109,10 @@ export const sendConfirmationEmail = async (recipientEmail, name) => {
       `
     }
 
-    await transporter.sendMail(mailOptions)
+    const info = await transporter.sendMail(mailOptions)
 
     console.log('✓ Confirmation email sent')
+    console.log('Message ID:', info.messageId)
 
     return true
   } catch (error) {
