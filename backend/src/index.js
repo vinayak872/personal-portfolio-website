@@ -30,12 +30,14 @@ await verifyEmailConnection()
 
 // CORS configuration
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
-  credentials: true,
-  optionsSuccessStatus: 200
+  origin: [
+    'https://personal-portfolio-website-five-self.vercel.app',
+    'http://localhost:3000'
+  ],
+  credentials: true
 }
-app.use(cors(corsOptions))
 
+app.use(cors(corsOptions))
 // Body parser middleware
 app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ extended: true, limit: '10mb' }))
