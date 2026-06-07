@@ -22,7 +22,7 @@ const app = express()
 await connectDB()
 
 // Email configuration verification
-//await verifyEmailConnection()
+await verifyEmailConnection()
 
 /**
  * Middleware Configuration
