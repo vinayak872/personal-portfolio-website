@@ -1,18 +1,19 @@
+import './config/env.js'
+
 import express from 'express'
 import cors from 'cors'
-import dotenv from 'dotenv'
+
 import { connectDB } from './config/database.js'
 import { verifyEmailConnection } from './config/email.js'
+
 import {
   errorHandler,
   requestLogger,
   notFoundHandler
 } from './middleware/errorHandler.js'
+
 import blogRoutes from './routes/blogRoutes.js'
 import contactRoutes from './routes/contactRoutes.js'
-
-// Load environment variables
-dotenv.config()
 
 // Initialize Express app
 const app = express()
