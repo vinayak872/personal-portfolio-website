@@ -42,35 +42,30 @@ function App() {
     }
   ]
 
-  const fallbackPosts = [
-    {
-      _id: 'fallback-1',
-      title: 'Portfolio Update',
-      excerpt: 'This portfolio is live and being updated. More blog content is coming soon.'
-    },
-    {
-      _id: 'fallback-2',
-      title: 'New Projects Added',
-      excerpt: 'Check out the featured projects section for the latest work in React, Node.js, and data visualization.'
-    }
-  ]
+  
 
   // Fetch blog posts
   useEffect(() => {
     const fetchPosts = async () => {
-      try {
-        setLoadingPosts(true)
-        const response = await blogAPI.getAll()
-        setPosts(response.data)
-        setErrorPosts(null)
-      } catch (err) {
-        console.error(err)
-        setErrorPosts(null)
-        setPosts(fallbackPosts)
-      } finally {
-        setLoadingPosts(false)
-      }
-    }
+  try {
+    setLoadingPosts(true)
+
+    const response = await blogAPI.getAll()
+
+    console.log('BLOG RESPONSE:', response.data)
+
+    setPosts(response.data.data || [])
+
+    setErrorPosts(null)
+  } catch (err) {
+    console.error('BLOG ERROR:', err)
+
+    setErrorPosts(null)
+    setPosts(fallbackPosts)
+  } finally {
+    setLoadingPosts(false)
+  }
+}
     fetchPosts()
   }, [])
 
@@ -297,8 +292,17 @@ function App() {
               {posts.map((post) => (
                 <article key={post._id} className="blog-card">
                   <div className="blog-meta-date">
-                    {new Date(post.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
-                  </div>
+  {post.createdAt
+    ? new Date(post.createdAt).toLocaleDateString(
+        'en-US',
+        {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric'
+        }
+      )
+    : 'Latest'}
+</div>
                   <h3 className="blog-title">{post.title}</h3>
                   <p className="blog-excerpt">{post.excerpt}</p>
                   <a href={`/blog/${post._id}`} className="read-more">
