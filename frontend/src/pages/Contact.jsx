@@ -131,15 +131,35 @@ export default function Contact() {
                 Feel free to reach out to me for any inquiries or collaboration opportunities.
               </p>
               <div className="contact-links">
-                <a href="mailto:your.email@example.com">📧 Email</a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                  💻 GitHub
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                  💼 LinkedIn
-                </a>
-              </div>
-            </div>
+  <a href="mailto:vinayakkumar893@gmail.com">
+    📧 Email
+  </a>
+
+  <a
+    href="https://github.com/vinayak872"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    💻 GitHub
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/vinayak872/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    💼 LinkedIn
+  </a>
+
+  <a
+    href="https://x.com/vinayak0872"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    🐦 X (Twitter)
+  </a>
+</div>
+    </div>
           </div>
         </div>
       </section>

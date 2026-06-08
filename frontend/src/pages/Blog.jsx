@@ -15,8 +15,14 @@ export default function Blog() {
     const fetchPosts = async () => {
       try {
         setLoading(true)
+
         const response = await blogAPI.getAll()
-        setPosts(response.data)
+
+        console.log('Blog API Response:', response.data)
+
+        // IMPORTANT FIX
+        setPosts(response.data.data)
+
         setError(null)
       } catch (err) {
         setError('Failed to fetch blog posts.')
@@ -36,7 +42,9 @@ export default function Blog() {
           <h1 className="section-title">Blog</h1>
 
           {loading && (
-            <div className="loading">Loading blog posts...</div>
+            <div className="loading">
+              Loading blog posts...
+            </div>
           )}
 
           {error && (
@@ -49,12 +57,24 @@ export default function Blog() {
             <div className="blog-grid">
               {posts.map((post) => (
                 <article key={post._id} className="blog-card">
-                  <h2 className="blog-title">{post.title}</h2>
+                  <h2 className="blog-title">
+                    {post.title}
+                  </h2>
+
                   <p className="blog-meta">
-                    {new Date(post.createdAt).toLocaleDateString()}
+                    {new Date(
+                      post.createdAt
+                    ).toLocaleDateString()}
                   </p>
-                  <p className="blog-excerpt">{post.excerpt}</p>
-                  <a href={`/blog/${post._id}`} className="read-more">
+
+                  <p className="blog-excerpt">
+                    {post.excerpt}
+                  </p>
+
+                  <a
+                    href={`/blog/${post._id}`}
+                    className="read-more"
+                  >
                     Read More →
                   </a>
                 </article>
