@@ -1,8 +1,15 @@
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = process.env.RESEND_API_KEY
+  ? new Resend(process.env.RESEND_API_KEY)
+  : null
 
 export const verifyEmailConnection = async () => {
+  if (!resend) {
+    console.warn('! RESEND_API_KEY is not set; email sending is disabled in this environment')
+    return false
+  }
+
   console.log('✓ Resend configured')
   return true
 }
@@ -14,6 +21,11 @@ export const sendContactEmail = async (
   message
 ) => {
   try {
+    if (!resend) {
+      console.warn('! Skipping admin email because Resend is not configured')
+      return false
+    }
+
     console.log('=== SEND CONTACT EMAIL STARTED ===')
 
     await resend.emails.send({
@@ -43,6 +55,11 @@ export const sendConfirmationEmail = async (
   name
 ) => {
   try {
+    if (!resend) {
+      console.warn('! Skipping confirmation email because Resend is not configured')
+      return false
+    }
+
     await resend.emails.send({
       from: 'onboarding@resend.dev',
       to: recipientEmail,

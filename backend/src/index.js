@@ -32,7 +32,8 @@ await verifyEmailConnection()
 const corsOptions = {
   origin: [
     'https://personal-portfolio-website-five-self.vercel.app',
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'http://127.0.0.1:3000'
   ],
   credentials: true
 }

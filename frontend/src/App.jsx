@@ -46,28 +46,30 @@ function App() {
 
   // Fetch blog posts
   useEffect(() => {
-    const fetchPosts = async () => {
-  try {
-    setLoadingPosts(true)
+  const fetchPosts = async () => {
+    try {
+      setLoadingPosts(true)
 
-    const response = await blogAPI.getAll()
+      const response = await blogAPI.getAll()
 
-    console.log('BLOG RESPONSE:', response.data)
+      console.log('BLOG RESPONSE:', response.data)
 
-    setPosts(response.data.data || [])
+      setPosts(response.data.data || [])
+      setErrorPosts(null)
+    } catch (err) {
+      console.error('BLOG ERROR:', err)
 
-    setErrorPosts(null)
-  } catch (err) {
-    console.error('BLOG ERROR:', err)
-
-    setErrorPosts(null)
-    setPosts(fallbackPosts)
-  } finally {
-    setLoadingPosts(false)
+      setErrorPosts('Failed to load blog posts')
+      setPosts([])
+    } finally {
+      setLoadingPosts(false)
+    }
   }
-}
-    fetchPosts()
-  }, [])
+
+  fetchPosts()
+}, [])
+  
+   
 
   const handleContactChange = (e) => {
     const { name, value } = e.target
@@ -392,19 +394,40 @@ function App() {
             <div className="contact-info">
               <h3>Connect With Me</h3>
               <div className="social-links">
-                <a href="https://github.com/vinayak872" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <span>GitHub</span>
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <span>LinkedIn</span>
-                </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <span>Twitter</span>
-                </a>
-                <a href="mailto:your.email@example.com" className="social-link">
-                  <span>Email</span>
-                </a>
-              </div>
+  <a
+    href="https://github.com/vinayak872"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-link"
+  >
+    <span>GitHub</span>
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/vinayak872/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-link"
+  >
+    <span>LinkedIn</span>
+  </a>
+
+  <a
+    href="https://x.com/vinayak0872"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-link"
+  >
+    <span>X (Twitter)</span>
+  </a>
+
+  <a
+    href="mailto:vinayakkumar893@gmail.com"
+    className="social-link"
+  >
+    <span>Email</span>
+  </a>
+</div>
             </div>
           </div>
         </div>
