@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import './styles/global.css'
@@ -6,19 +6,15 @@ import './styles/navbar.css'
 import './styles/home.css'
 import './styles/certifications.css'
 import './styles/projects.css'
-import './styles/blog.css'
 import './styles/contact.css'
 import './styles/footer.css'
-import { blogAPI, contactAPI } from './services/api'
+import { contactAPI } from './services/api'
 
 /**
  * Main App Component
  * Single page layout with all sections
  */
 function App() {
-  const [posts, setPosts] = useState([])
-  const [loadingPosts, setLoadingPosts] = useState(true)
-  const [errorPosts, setErrorPosts] = useState(null)
   const [contactForm, setContactForm] = useState({ name: '', email: '', subject: '', message: '' })
   const [contactLoading, setContactLoading] = useState(false)
   const [contactSuccess, setContactSuccess] = useState(false)
@@ -41,35 +37,6 @@ function App() {
       topics: ['Python', 'React', 'Data Analysis', 'API Integration']
     }
   ]
-
-  
-
-  // Fetch blog posts
-  useEffect(() => {
-  const fetchPosts = async () => {
-    try {
-      setLoadingPosts(true)
-
-      const response = await blogAPI.getAll()
-
-      console.log('BLOG RESPONSE:', response.data)
-
-      setPosts(response.data.data || [])
-      setErrorPosts(null)
-    } catch (err) {
-      console.error('BLOG ERROR:', err)
-
-      setErrorPosts('Failed to load blog posts')
-      setPosts([])
-    } finally {
-      setLoadingPosts(false)
-    }
-  }
-
-  fetchPosts()
-}, [])
-  
-   
 
   const handleContactChange = (e) => {
     const { name, value } = e.target
@@ -247,8 +214,6 @@ function App() {
       <section id="projects" className="projects-section">
         <div className="container">
           <h2 className="section-title">Featured Projects</h2>
-          
-          {/* Featured Projects */}
           <div className="projects-grid">
             {featuredProjects.map((project, idx) => (
               <div key={idx} className="project-card featured">
@@ -273,53 +238,6 @@ function App() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Blog Section */}
-      <section id="blog" className="blog-section">
-        <div className="container">
-          <h2 className="section-title">Latest Articles</h2>
-
-          {loadingPosts && <div className="loading">Loading articles...</div>}
-
-          {errorPosts && (
-            <div className="error">
-              <p>{errorPosts}</p>
-            </div>
-          )}
-
-          {!loadingPosts && !errorPosts && posts.length > 0 && (
-            <div className="blog-grid">
-              {posts.map((post) => (
-                <article key={post._id} className="blog-card">
-                  <div className="blog-meta-date">
-  {post.createdAt
-    ? new Date(post.createdAt).toLocaleDateString(
-        'en-US',
-        {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric'
-        }
-      )
-    : 'Latest'}
-</div>
-                  <h3 className="blog-title">{post.title}</h3>
-                  <p className="blog-excerpt">{post.excerpt}</p>
-                  <a href={`/blog/${post._id}`} className="read-more">
-                    Read More →
-                  </a>
-                </article>
-              ))}
-            </div>
-          )}
-
-          {!loadingPosts && !errorPosts && posts.length === 0 && (
-            <div className="no-posts">
-              <p>No articles yet. Check back soon!</p>
-            </div>
-          )}
         </div>
       </section>
 
@@ -394,40 +312,19 @@ function App() {
             <div className="contact-info">
               <h3>Connect With Me</h3>
               <div className="social-links">
-  <a
-    href="https://github.com/vinayak872"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="social-link"
-  >
-    <span>GitHub</span>
-  </a>
-
-  <a
-    href="https://www.linkedin.com/in/vinayak872/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="social-link"
-  >
-    <span>LinkedIn</span>
-  </a>
-
-  <a
-    href="https://x.com/vinayak0872"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="social-link"
-  >
-    <span>X (Twitter)</span>
-  </a>
-
-  <a
-    href="mailto:vinayakkumar893@gmail.com"
-    className="social-link"
-  >
-    <span>Email</span>
-  </a>
-</div>
+                <a href="https://github.com/vinayak872" target="_blank" rel="noopener noreferrer" className="social-link">
+                  <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/vinayak872/" target="_blank" rel="noopener noreferrer" className="social-link">
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://x.com/vinayak0872" target="_blank" rel="noopener noreferrer" className="social-link">
+                  <span>X (Twitter)</span>
+                </a>
+                <a href="mailto:vinayakkumar893@gmail.com" className="social-link">
+                  <span>Email</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
