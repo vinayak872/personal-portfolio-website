@@ -37,7 +37,12 @@ const corsOptions = {
   ],
   credentials: true
 }
-
+origin: [
+  'https://vinayak.page',    // ← add this
+  'https://personal-portfolio-website-five-self.vercel.app',
+  'http://localhost:3000',
+  'http://127.0.0.1:3000'
+]
 app.use(cors(corsOptions))
 // Body parser middleware
 app.use(express.json({ limit: '10mb' }))
