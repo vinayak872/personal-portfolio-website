@@ -28,38 +28,47 @@ Listed in your specified order with professional badges:
 1. **AWS Certified Data Engineer – Associate** 
    - Badge: AWS
    - Description: Professional certification demonstrating expertise in designing and implementing data engineering solutions on AWS cloud platform.
+   - Verification: https://www.credly.com/badges/d6ecea8f-cfd8-4c98-8b19-85fc1b50eac3/public_url
 
 2. **MongoDB Associate Developer**
    - Badge: MongoDB
    - Description: Certification validating skills in developing applications with MongoDB database and MERN stack technologies.
+   - Verification: https://www.credly.com/badges/2b9b52be-c564-4302-952e-bb97a6ec3d12/public_url
 
 3. **AWS Certified Cloud Practitioner**
    - Badge: AWS
    - Description: Foundational AWS certification demonstrating understanding of cloud concepts, AWS services, and cloud architecture principles.
+   - Verification: https://www.credly.com/badges/89870114-c6ea-4e88-ac61-9050710c7f0c/public_url
 
-4. **MongoDB Associate Database Administrator Exam**
-   - Badge: MongoDB
-   - Description: Advanced MongoDB certification covering database administration, deployment, and management of MongoDB instances.
-
-5. **Linguaskill Certificate**
+4. **Linguaskill Certificate**
    - Badge: Language
    - Description: Official English language proficiency certification demonstrating professional communication skills.
+   - Verification: https://drive.google.com/file/d/1gXB6Cu-XCtX-5pVAj5fup0KsmNUVqt_p/view?usp=sharing
+
+5. **Automation Anywhere Certified Essentials RPA Professional (Automation 360)**
+   - Badge: RPA
+   - Description: Certification in Robotic Process Automation covering automation design, implementation, and deployment using Automation Anywhere platform.
+   - Verification: https://certificates.automationanywhere.com/c41c11f9-0a18-45c2-83b4-ef739079226f#acc.7TlkKqNF
 
 6. **Automation Anywhere Certified Essentials RPA Professional (Automation 360)**
    - Badge: RPA
    - Description: Certification in Robotic Process Automation covering automation design, implementation, and deployment using Automation Anywhere platform.
+   - Verification: https://certificates.automationanywhere.com/c41c11f9-0a18-45c2-83b4-ef739079226f#acc.7TlkKqNF
 
 7. **Aviatrix Certified Engineer (ACE) Multicloud Network Associate**
    - Badge: Cloud
    - Description: Certification demonstrating expertise in multicloud networking and cloud infrastructure management across different cloud providers.
+   - Verification: https://www.credly.com/badges/940cecba-0229-408b-88ba-7bceef0dbf7f/public_url
 
 8. **Essentials Automation Certification**
    - Badge: Automation
    - Description: Foundational certification in automation technologies and practices for business process optimization.
+   - Verification: https://certificates.automationanywhere.com/2149fb3a-abfe-4cbc-832c-057de124ed62#acc.DdXGtT2M
 
 9. **Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate**
    - Badge: AI/Oracle
    - Description: Latest certification validating knowledge of AI concepts, Oracle Cloud AI services, and artificial intelligence applications in enterprise.
+   - Verification: https://catalog-education.oracle.com/ords/certview/sharebadge?id=D8266F6D8A7AA7CB9644BBF1BB063C2C0D44808D0D72F55E3DE6B30A97A99BED
 
 ---
 
@@ -226,6 +235,31 @@ Your certifications now showcase:
 - **Comprehensive Training**: Wide range of professional credentials
 
 This demonstrates well-rounded technical expertise and continuous learning!
+
+---
+
+## ➕ Added Certifications (June 2026)
+
+The following two certifications were appended per your request. Dates set to 06/2026; provide exact dates, credential IDs, or verification links if you want them recorded.
+
+1. **GitHub Foundations** — GitHub — 06/2026
+   - Skills: Git, version control workflows, branching, pull requests, repository management
+
+   - Description: Foundational certification covering Git version control, repository workflows, branching and merging strategies, pull requests, and collaborative development using GitHub.
+   - Verification: https://learn.microsoft.com/api/credentials/share/en-us/VinayakKumar-8440/B59090E41B914FAF?sharingId=3BD83909BBEE8BF2
+
+2. **Microsoft Certified: Azure Fundamentals** — Microsoft — 06/2026
+   - Skills: Cloud concepts, core Azure services, pricing & support fundamentals
+   - Description: Entry-level Azure certification covering cloud fundamentals, core Azure services (compute, storage, networking), security and compliance basics, and cost/pricing considerations.
+   - Verification: https://learn.microsoft.com/api/credentials/share/en-us/VinayakKumar-8440/D7EAFE32293E6BD0?sharingId=3BD83909BBEE8BF2
+
+If you prefer exact dates, credential IDs, or verification links, provide them and I will update the entries.
+
+---
+
+## 🔗 Additional Verification Links
+
+- **Advanced Automation Certification**: https://certificates.automationanywhere.com/766d41ec-36e8-41ff-8733-bb6af75b3dea#acc.RgYa0Z53
 
 ---
 

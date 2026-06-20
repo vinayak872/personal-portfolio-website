@@ -84,6 +84,29 @@
   flex-grow: 1;
 }
 
+/* Verification action button (hidden until hover) */
+.cert-action {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  background: linear-gradient(135deg, var(--accent-color), #8b5cf6);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  box-shadow: 0 6px 14px rgba(59,130,246,0.12);
+}
+
+.certification-card:hover .cert-action {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .certifications-grid {

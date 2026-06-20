@@ -137,10 +137,29 @@ function App() {
           <div className="certifications-grid">
             <div className="certification-card">
               <div className="cert-header">
+                <h3 className="cert-title">Microsoft Certified: Azure Fundamentals</h3>
+                <span className="cert-badge">Azure</span>
+              </div>
+              <p className="cert-description">Foundational understanding of cloud concepts and core Microsoft Azure services, pricing, and support.</p>
+              <a href="https://learn.microsoft.com/api/credentials/share/en-us/VinayakKumar-8440/D7EAFE32293E6BD0?sharingId=3BD83909BBEE8BF2" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
+            </div>
+            <div className="certification-card">
+              <div className="cert-header">
+                <h3 className="cert-title">GitHub Foundations</h3>
+                <span className="cert-badge">GitHub</span>
+              </div>
+              <p className="cert-description">Fundamental skills in Git and GitHub: repositories, branching, pull requests, and collaboration workflows.</p>
+              <a href="https://learn.microsoft.com/api/credentials/share/en-us/VinayakKumar-8440/B59090E41B914FAF?sharingId=3BD83909BBEE8BF2" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
+            </div>
+            
+            <div className="certification-card">
+
+              <div className="cert-header">
                 <h3 className="cert-title">AWS Certified Data Engineer – Associate</h3>
                 <span className="cert-badge">AWS</span>
               </div>
               <p className="cert-description">Professional certification demonstrating expertise in designing and implementing data engineering solutions on AWS cloud platform.</p>
+              <a href="https://www.credly.com/badges/d6ecea8f-cfd8-4c98-8b19-85fc1b50eac3/public_url" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
             </div>
 
             <div className="certification-card">
@@ -149,6 +168,7 @@ function App() {
                 <span className="cert-badge">MongoDB</span>
               </div>
               <p className="cert-description">Certification validating skills in developing applications with MongoDB database and MERN stack technologies.</p>
+              <a href="https://www.credly.com/badges/2b9b52be-c564-4302-952e-bb97a6ec3d12/public_url" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
             </div>
 
             <div className="certification-card">
@@ -157,15 +177,10 @@ function App() {
                 <span className="cert-badge">AWS</span>
               </div>
               <p className="cert-description">Foundational AWS certification demonstrating understanding of cloud concepts, AWS services, and cloud architecture principles.</p>
+              <a href="https://www.credly.com/badges/89870114-c6ea-4e88-ac61-9050710c7f0c/public_url" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
             </div>
 
-            <div className="certification-card">
-              <div className="cert-header">
-                <h3 className="cert-title">MongoDB Associate Database Administrator Exam</h3>
-                <span className="cert-badge">MongoDB</span>
-              </div>
-              <p className="cert-description">Advanced MongoDB certification covering database administration, deployment, and management of MongoDB instances.</p>
-            </div>
+            
 
             <div className="certification-card">
               <div className="cert-header">
@@ -173,6 +188,7 @@ function App() {
                 <span className="cert-badge">Language</span>
               </div>
               <p className="cert-description">Official English language proficiency certification demonstrating professional communication skills.</p>
+              <a href="https://drive.google.com/file/d/1gXB6Cu-XCtX-5pVAj5fup0KsmNUVqt_p/view?usp=sharing" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
             </div>
 
             <div className="certification-card">
@@ -181,6 +197,7 @@ function App() {
                 <span className="cert-badge">RPA</span>
               </div>
               <p className="cert-description">Certification in Robotic Process Automation covering automation design, implementation, and deployment using Automation Anywhere platform.</p>
+              <a href="https://certificates.automationanywhere.com/c41c11f9-0a18-45c2-83b4-ef739079226f#acc.7TlkKqNF" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
             </div>
 
             <div className="certification-card">
@@ -189,6 +206,7 @@ function App() {
                 <span className="cert-badge">Cloud</span>
               </div>
               <p className="cert-description">Certification demonstrating expertise in multicloud networking and cloud infrastructure management across different cloud providers.</p>
+              <a href="https://www.credly.com/badges/940cecba-0229-408b-88ba-7bceef0dbf7f/public_url" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
             </div>
 
             <div className="certification-card">
@@ -197,6 +215,7 @@ function App() {
                 <span className="cert-badge">Automation</span>
               </div>
               <p className="cert-description">Foundational certification in automation technologies and practices for business process optimization.</p>
+              <a href="https://certificates.automationanywhere.com/2149fb3a-abfe-4cbc-832c-057de124ed62#acc.DdXGtT2M" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
             </div>
 
             <div className="certification-card">
@@ -205,6 +224,7 @@ function App() {
                 <span className="cert-badge">AI/Oracle</span>
               </div>
               <p className="cert-description">Latest certification validating knowledge of AI concepts, Oracle Cloud AI services, and artificial intelligence applications in enterprise.</p>
+              <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=D8266F6D8A7AA7CB9644BBF1BB063C2C0D44808D0D72F55E3DE6B30A97A99BED" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
             </div>
           </div>
         </div>
