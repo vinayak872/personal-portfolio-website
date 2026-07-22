@@ -38,6 +38,142 @@ function App() {
     }
   ]
 
+  // Certifications data
+  const certifications = [
+    {
+      title: 'Microsoft Certified: DevOps Engineer Expert',
+      badge: 'DevOps',
+      description: 'Expert-level skills in combining people, processes, and technologies to continuously deliver valuable products and services.',
+      url: 'https://learn.microsoft.com/api/credentials/share/en-us/VinayakKumar-8440/3C25CD0F68E853FC?sharingId=3BD83909BBEE8BF2'
+    },
+    {
+      title: 'AWS Certified Solutions Architect – Associate',
+      badge: 'AWS',
+      description: 'Demonstrates knowledge of how to architect and deploy secure and robust applications on AWS technologies.',
+      url: 'https://www.credly.com/badges/c2335609-a7f9-4e65-a7c3-515377075096/public_url'
+    },
+    {
+      title: 'Microsoft Certified: Azure Administrator Associate',
+      badge: 'Azure',
+      description: 'Skills in implementing, managing, and monitoring an organization\'s Microsoft Azure environment.',
+      url: 'https://learn.microsoft.com/api/credentials/share/en-us/VinayakKumar-8440/9FC83D7713E2E4A4?sharingId=3BD83909BBEE8BF2'
+    },
+    {
+      title: 'AWS Certified CloudOps Engineer – Associate',
+      badge: 'AWS',
+      description: 'Expertise in automating and operating workloads and infrastructure on AWS, focusing on security, cost, and performance.',
+      url: 'https://www.credly.com/badges/1f98d3bf-6108-4ffe-9b68-5d66d210c2a3/public_url'
+    },
+    {
+      title: 'Certified Implementation Specialist - Data Foundations',
+      badge: 'ServiceNow',
+      description: 'Expertise in ServiceNow\'s Configuration Management Database (CMDB) and Common Service Data Model (CSDM).',
+      url: 'https://www.credly.com/badges/152f6b6c-35ab-4e6d-b646-21218f66ce5c/public_url'
+    },
+    {
+      title: 'Microsoft Certified: Azure Fundamentals',
+      badge: 'Azure',
+      description: 'Foundational understanding of cloud concepts and core Microsoft Azure services, pricing, and support.',
+      url: 'https://learn.microsoft.com/api/credentials/share/en-us/VinayakKumar-8440/D7EAFE32293E6BD0?sharingId=3BD83909BBEE8BF2'
+    },
+    {
+      title: 'GitHub Foundations',
+      badge: 'GitHub',
+      description: 'Fundamental skills in Git and GitHub: repositories, branching, pull requests, and collaboration workflows.',
+      url: 'https://learn.microsoft.com/api/credentials/share/en-us/VinayakKumar-8440/B59090E41B914FAF?sharingId=3BD83909BBEE8BF2'
+    },
+    {
+      title: 'AWS Certified Data Engineer – Associate',
+      badge: 'AWS',
+      description: 'Professional certification demonstrating expertise in designing and implementing data engineering solutions on AWS cloud platform.',
+      url: 'https://www.credly.com/badges/d6ecea8f-cfd8-4c98-8b19-85fc1b50eac3/public_url'
+    },
+    {
+      title: 'MongoDB Associate Developer',
+      badge: 'MongoDB',
+      description: 'Certification validating skills in developing applications with MongoDB database and MERN stack technologies.',
+      url: 'https://www.credly.com/badges/2b9b52be-c564-4302-952e-bb97a6ec3d12/public_url'
+    },
+    {
+      title: 'AWS Certified Cloud Practitioner',
+      badge: 'AWS',
+      description: 'Foundational AWS certification demonstrating understanding of cloud concepts, AWS services, and cloud architecture principles.',
+      url: 'https://www.credly.com/badges/89870114-c6ea-4e88-ac61-9050710c7f0c/public_url'
+    },
+    {
+      title: 'Linguaskill Certificate',
+      badge: 'Language',
+      description: 'Official English language proficiency certification demonstrating professional communication skills.',
+      url: 'https://drive.google.com/file/d/1gXB6Cu-XCtX-5pVAj5fup0KsmNUVqt_p/view?usp=sharing'
+    },
+    {
+      title: 'Automation Anywhere Certified Essentials RPA Professional (Automation 360)',
+      badge: 'RPA',
+      description: 'Certification in Robotic Process Automation covering automation design, implementation, and deployment using Automation Anywhere platform.',
+      url: 'https://certificates.automationanywhere.com/c41c11f9-0a18-45c2-83b4-ef739079226f#acc.7TlkKqNF'
+    },
+    {
+      title: 'Aviatrix Certified Engineer (ACE) Multicloud Network Associate',
+      badge: 'Cloud',
+      description: 'Certification demonstrating expertise in multicloud networking and cloud infrastructure management across different cloud providers.',
+      url: 'https://www.credly.com/badges/940cecba-0229-408b-88ba-7bceef0dbf7f/public_url'
+    },
+    {
+      title: 'Essentials Automation Certification',
+      badge: 'Automation',
+      description: 'Foundational certification in automation technologies and practices for business process optimization.',
+      url: 'https://certificates.automationanywhere.com/2149fb3a-abfe-4cbc-832c-057de124ed62#acc.DdXGtT2M'
+    },
+    {
+      title: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
+      badge: 'AI/Oracle',
+      description: 'Latest certification validating knowledge of AI concepts, Oracle Cloud AI services, and artificial intelligence applications in enterprise.',
+      url: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=D8266F6D8A7AA7CB9644BBF1BB063C2C0D44808D0D72F55E3DE6B30A97A99BED'
+    },
+    {
+      title: 'Automation Anywhere Certified Essentials RPA Professional (Automation 360)',
+      badge: 'RPA',
+      description: 'Certification in Robotic Process Automation covering automation design, implementation, and deployment using Automation Anywhere platform.',
+      url: 'https://certificates.automationanywhere.com/c41c11f9-0a18-45c2-83b4-ef739079226f#acc.7TlkKqNF'
+    }
+  ];
+
+  // Skills data organized by category
+  const skillsData = [
+    {
+      category: 'Cloud & DevOps',
+      skills: ['AWS', 'Azure', 'CI/CD', 'Docker', 'Terraform', 'Cloud Architecture', 'Azure DevOps', 'Multi-Cloud Networking']
+    },
+    {
+      category: 'Data & AI',
+      skills: ['MongoDB', 'Data Engineering', 'ETL', 'Data Pipelines', 'Python', 'Oracle Cloud (OCI)', 'AI/ML Fundamentals']
+    },
+    {
+      category: 'Backend Development',
+      skills: ['Node.js', 'Express.js', 'Python', 'REST APIs', 'Microservices', 'Socket.io']
+    },
+    {
+      category: 'Frontend Development',
+      skills: ['React', 'JavaScript (ES6+)', 'HTML5 & CSS3', 'Responsive Design', 'Vite']
+    },
+    {
+      category: 'Automation & RPA',
+      skills: ['Automation Anywhere', 'RPA', 'Process Automation', 'Scripting']
+    },
+    {
+      category: 'Tools & Platforms',
+      skills: ['Git & GitHub', 'ServiceNow (CMDB)', 'Jira', 'Postman', 'VS Code']
+    }
+  ];
+
+  // Social links data
+  const socialLinks = [
+    { name: 'GitHub', url: 'https://github.com/vinayak872', icon: '...' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/vinayak872/', icon: '...' },
+    { name: 'X (Twitter)', url: 'https://x.com/vinayak0872', icon: '...' },
+    { name: 'Email', url: 'mailto:vinayakkumar893@gmail.com', icon: '...' }
+  ];
+
   const handleContactChange = (e) => {
     const { name, value } = e.target
     setContactForm(prev => ({ ...prev, [name]: value }))
@@ -99,33 +235,16 @@ function App() {
         <div className="container">
           <h2 className="section-title">Skills & Expertise</h2>
           <div className="skills-grid">
-            <div className="skill-card">
-              <h3>Frontend</h3>
-              <div className="skill-tags">
-                <span className="skill-tag">React</span>
-                <span className="skill-tag">JavaScript</span>
-                <span className="skill-tag">CSS</span>
-                <span className="skill-tag">Responsive Design</span>
+            {skillsData.map((skillGroup, index) => (
+              <div key={index} className="skill-card">
+                <h3>{skillGroup.category}</h3>
+                <div className="skill-tags">
+                  {skillGroup.skills.map((skill, i) => (
+                    <span key={i} className="skill-tag">{skill}</span>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="skill-card">
-              <h3>Backend</h3>
-              <div className="skill-tags">
-                <span className="skill-tag">Node.js</span>
-                <span className="skill-tag">Express</span>
-                <span className="skill-tag">MongoDB</span>
-                <span className="skill-tag">REST APIs</span>
-              </div>
-            </div>
-            <div className="skill-card">
-              <h3>Tools & Technologies</h3>
-              <div className="skill-tags">
-                <span className="skill-tag">Git</span>
-                <span className="skill-tag">Docker</span>
-                <span className="skill-tag">AWS</span>
-                <span className="skill-tag">Python</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -135,97 +254,18 @@ function App() {
         <div className="container">
           <h2 className="section-title">Certifications & Credentials</h2>
           <div className="certifications-grid">
-            <div className="certification-card">
-              <div className="cert-header">
-                <h3 className="cert-title">Microsoft Certified: Azure Fundamentals</h3>
-                <span className="cert-badge">Azure</span>
+            {certifications.map((cert, index) => (
+              <div key={index} className="certification-card">
+                <div className="cert-header">
+                  <h3 className="cert-title">{cert.title}</h3>
+                  <span className="cert-badge">{cert.badge}</span>
+                </div>
+                <p className="cert-description">{cert.description}</p>
+                <a href={cert.url} className="cert-action" target="_blank" rel="noopener noreferrer">
+                  View Verification
+                </a>
               </div>
-              <p className="cert-description">Foundational understanding of cloud concepts and core Microsoft Azure services, pricing, and support.</p>
-              <a href="https://learn.microsoft.com/api/credentials/share/en-us/VinayakKumar-8440/D7EAFE32293E6BD0?sharingId=3BD83909BBEE8BF2" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
-            </div>
-            <div className="certification-card">
-              <div className="cert-header">
-                <h3 className="cert-title">GitHub Foundations</h3>
-                <span className="cert-badge">GitHub</span>
-              </div>
-              <p className="cert-description">Fundamental skills in Git and GitHub: repositories, branching, pull requests, and collaboration workflows.</p>
-              <a href="https://learn.microsoft.com/api/credentials/share/en-us/VinayakKumar-8440/B59090E41B914FAF?sharingId=3BD83909BBEE8BF2" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
-            </div>
-            
-            <div className="certification-card">
-
-              <div className="cert-header">
-                <h3 className="cert-title">AWS Certified Data Engineer – Associate</h3>
-                <span className="cert-badge">AWS</span>
-              </div>
-              <p className="cert-description">Professional certification demonstrating expertise in designing and implementing data engineering solutions on AWS cloud platform.</p>
-              <a href="https://www.credly.com/badges/d6ecea8f-cfd8-4c98-8b19-85fc1b50eac3/public_url" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
-            </div>
-
-            <div className="certification-card">
-              <div className="cert-header">
-                <h3 className="cert-title">MongoDB Associate Developer</h3>
-                <span className="cert-badge">MongoDB</span>
-              </div>
-              <p className="cert-description">Certification validating skills in developing applications with MongoDB database and MERN stack technologies.</p>
-              <a href="https://www.credly.com/badges/2b9b52be-c564-4302-952e-bb97a6ec3d12/public_url" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
-            </div>
-
-            <div className="certification-card">
-              <div className="cert-header">
-                <h3 className="cert-title">AWS Certified Cloud Practitioner</h3>
-                <span className="cert-badge">AWS</span>
-              </div>
-              <p className="cert-description">Foundational AWS certification demonstrating understanding of cloud concepts, AWS services, and cloud architecture principles.</p>
-              <a href="https://www.credly.com/badges/89870114-c6ea-4e88-ac61-9050710c7f0c/public_url" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
-            </div>
-
-            
-
-            <div className="certification-card">
-              <div className="cert-header">
-                <h3 className="cert-title">Linguaskill Certificate</h3>
-                <span className="cert-badge">Language</span>
-              </div>
-              <p className="cert-description">Official English language proficiency certification demonstrating professional communication skills.</p>
-              <a href="https://drive.google.com/file/d/1gXB6Cu-XCtX-5pVAj5fup0KsmNUVqt_p/view?usp=sharing" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
-            </div>
-
-            <div className="certification-card">
-              <div className="cert-header">
-                <h3 className="cert-title">Automation Anywhere Certified Essentials RPA Professional (Automation 360)</h3>
-                <span className="cert-badge">RPA</span>
-              </div>
-              <p className="cert-description">Certification in Robotic Process Automation covering automation design, implementation, and deployment using Automation Anywhere platform.</p>
-              <a href="https://certificates.automationanywhere.com/c41c11f9-0a18-45c2-83b4-ef739079226f#acc.7TlkKqNF" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
-            </div>
-
-            <div className="certification-card">
-              <div className="cert-header">
-                <h3 className="cert-title">Aviatrix Certified Engineer (ACE) Multicloud Network Associate</h3>
-                <span className="cert-badge">Cloud</span>
-              </div>
-              <p className="cert-description">Certification demonstrating expertise in multicloud networking and cloud infrastructure management across different cloud providers.</p>
-              <a href="https://www.credly.com/badges/940cecba-0229-408b-88ba-7bceef0dbf7f/public_url" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
-            </div>
-
-            <div className="certification-card">
-              <div className="cert-header">
-                <h3 className="cert-title">Essentials Automation Certification</h3>
-                <span className="cert-badge">Automation</span>
-              </div>
-              <p className="cert-description">Foundational certification in automation technologies and practices for business process optimization.</p>
-              <a href="https://certificates.automationanywhere.com/2149fb3a-abfe-4cbc-832c-057de124ed62#acc.DdXGtT2M" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
-            </div>
-
-            <div className="certification-card">
-              <div className="cert-header">
-                <h3 className="cert-title">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h3>
-                <span className="cert-badge">AI/Oracle</span>
-              </div>
-              <p className="cert-description">Latest certification validating knowledge of AI concepts, Oracle Cloud AI services, and artificial intelligence applications in enterprise.</p>
-              <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=D8266F6D8A7AA7CB9644BBF1BB063C2C0D44808D0D72F55E3DE6B30A97A99BED" className="cert-action" target="_blank" rel="noopener noreferrer">View Verification</a>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -332,18 +372,11 @@ function App() {
             <div className="contact-info">
               <h3>Connect With Me</h3>
               <div className="social-links">
-                <a href="https://github.com/vinayak872" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <span>GitHub</span>
-                </a>
-                <a href="https://www.linkedin.com/in/vinayak872/" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <span>LinkedIn</span>
-                </a>
-                <a href="https://x.com/vinayak0872" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <span>X (Twitter)</span>
-                </a>
-                <a href="mailto:vinayakkumar893@gmail.com" className="social-link">
-                  <span>Email</span>
-                </a>
+                {socialLinks.map((link, index) => (
+                  <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="social-link">
+                    <span>{link.name}</span>
+                  </a>
+                ))}
               </div>
             </div>
           </div>
